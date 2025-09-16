@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a.r.yvnce's Sec+ (sy0-701) Study Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Core Palette
+              'charcoal': '#515254',
+              'light-grey': '#A2A3A7',
+              'mint-green': '#B1E5BE',
+              'base-black': '#1D1D1D',
+
+              // UI Theme Colors
+              'background': '#1D1D1D',
+              'surface': '#2C2D2F',
+              'primary': '#B1E5BE',
+              'secondary': '#A2A3A7',
+              'tertiary': '#515254',
+              
+              'text-primary': '#F0F0F0',
+              'text-secondary': '#A2A3A7',
+              'text-on-primary': '#1D1D1D',
+
+              // State Colors
+              'correct': '#B1E5BE',
+              'correct-text': '#1D1D1D',
+              'correct-subtle-bg': 'rgba(177, 229, 190, 0.1)',
+              'incorrect': '#FCA5A5',
+              'incorrect-text': '#B91C1C',
+              'incorrect-subtle-bg': 'rgba(252, 165, 165, 0.1)',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in': 'fade-in 0.5s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @media print {
+        body {
+          padding: 0;
+          margin: 0;
+          background-color: #fff;
+          color: #000;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .printable-card {
+          box-shadow: none !important;
+          border: 1px solid #ccc !important;
+          page-break-inside: avoid;
+          margin-top: 1.5rem;
+          background-color: #fff !important;
+        }
+        main {
+          padding: 1rem !important;
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-text-secondary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
